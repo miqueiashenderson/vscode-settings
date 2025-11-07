@@ -1,0 +1,91 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.donotVerifyTags": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "geminicodeassist.project": "subtle-abacus-kz4b2",
+    "redhat.telemetry.enabled": true,
+    "diffEditor.codeLens": true,
+    "workbench.colorTheme": "Halcyon"
+
+      /* 
+  ########################################################################
+                              Vim settings 
+  ########################################################################
+  */
+  ,"extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.useSystemClipboard": true,
+  "vim.leader": "Space",
+  "vim.hlsearch": true,
+  "editor.linkedEditing": true,
+  "editor.suggest.insertMode": "replace",
+  "vim.searchHighlightColor": "#f6ff0080",
+  "vim.searchHighlightTextColor": "#fff",
+  //flash
+
+  "vim.incsearch": true,
+  "vim.surround": true,
+  "vim.easymotion": true,
+  "vim.smartRelativeLine": true,
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "s", "v"], "commands": [":vsplit"] },
+    { "before": ["<leader>", "s", "h"], "commands": [":split"] },
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    { "before": ["<leader>", "x"], "commands": [":x!"] },
+    { "before": ["<leader>", "q"], "commands": [":q!"] },
+    {
+      "before": ["<leader>", "n", "h"],
+      "when": "editorTextFocus",
+      "commands": [":nohl"],
+      "silent": true
+    },
+    {
+      "before": ["g", "i"],
+      "commands": [
+        "editor.action.revealImplementation",
+        "editor.action.peekImplementation"
+      ]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": [
+        "editor.action.revealReferences",
+        "editor.action.peekReferences"
+      ]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    //GIT
+    {
+      "before": ["<leader>", "h", "r"],
+      "commands": ["git.revertSelectedRanges"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] }
+  ],
+}
